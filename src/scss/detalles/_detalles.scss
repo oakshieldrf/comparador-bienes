@@ -1,0 +1,81 @@
+// Estilos para pagina "Detalles"
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.detalles {
+  &__inputs {
+    &--content {
+      margin-bottom: 3rem;
+      @include m.flexLayout(column, center, center, 2rem);
+
+      @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-height: 450px;
+      }
+
+      & .col {
+        width: 100%;
+        padding: 2rem;
+        @include m.flexLayout(column, flex-start, flex-start, 2rem);
+        border-right: 2px solid v.$lightGray;
+      }
+
+      & .item {
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      & .row-buttons {
+        @include m.flexLayout(row, center, center, 0);
+        flex-wrap: wrap;
+        margin-bottom: 0;
+      }
+
+      & h5 {
+        margin-top: 0;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__amenidades {
+    padding: 3rem 0;
+    @include m.flexLayout(row, flex-start, center, 0);
+    flex-wrap: wrap;
+
+    @include m.tablet {
+      @include m.flexLayout(row, space-between, center, 4rem);
+      flex-wrap: wrap;
+    }
+
+    &--item {
+      @include m.flexLayout(column, center, center, 1rem);
+      width: 50%;
+      text-align: center;
+
+      @include m.tablet {
+        width: 140px;
+      }
+
+      & h5 {
+        margin-bottom: 0;
+      }
+      & span {
+        font-size: 4.5rem;
+        color: v.$midGray;
+      }
+    }
+  }
+
+  &__buttons {
+    margin: 3rem 0;
+    @include m.flexLayout(row, center, center, 2rem);
+
+    @include m.tablet {
+      @include m.flexLayout(row, flex-end, center, 3rem);
+      flex-wrap: wrap;
+    }
+  }
+}

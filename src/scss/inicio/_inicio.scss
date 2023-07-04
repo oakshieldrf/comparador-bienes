@@ -1,0 +1,30 @@
+// Estilos para pagina de inicio
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.ubicacion {
+  &__inputs {
+    margin: 5rem 6rem;
+
+    @include m.tablet {
+      margin: 5rem 12rem;
+    }
+    &--selects {
+      @include m.flexLayout(column, center, normal, 2rem);
+
+      @include m.tablet {
+        @include m.flexLayout(row, center, center, 2rem);
+      }
+
+      & .item {
+        flex: 1;
+        display: block;
+      }
+    }
+
+    &--button {
+      margin: 4.5rem 0;
+      @include m.flexLayout(row, flex-end, center, 2rem);
+    }
+  }
+}

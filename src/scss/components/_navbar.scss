@@ -1,0 +1,24 @@
+// Estilos para componente
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.navegacion {
+  padding: 1rem 2rem;
+  background-color: v.$primary;
+  color: v.$white !important;
+
+  & h4 {
+    margin-bottom: 0 !important;
+  }
+
+  &__menu {
+    @include m.flexLayout(row, space-between, center, 0);
+    height: 5rem;
+    position: relative;
+
+    & .icons > a {
+      @include m.flexLayout(row, space-between, center, 2rem);
+      margin: 0.5rem;
+    }
+  }
+}

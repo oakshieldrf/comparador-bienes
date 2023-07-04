@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles | Comparador de bienes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&family=Source+Sans+Pro:wght@400;600&family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./build/css/app.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body>
+    <!-- Contenedor del GIF de carga -->
+    <div id="loading" class="loading">
+      <img src="build/img/spinner.gif" alt="Icono de carga" />
+    </div>
+    <div class="all-content">
+      <!-- NAVBAR -->
+      <div class="navegacion">
+        <nav class="navegacion__menu">
+          <!-- LOGO -->
+          <div>
+            <a href="/index.html" rel="noopener noreferrer"
+              ><h4 style="color: #fff">COMPARADOR BIENES</h4></a
+            >
+          </div>
+          <!-- OPCIONES MENU -->
+          <!-- ICONOS -->
+          <div class="navegacion__menu icons">
+            <a href=""><span class="material-icons">shopping_bag</span></a>
+            <a href=""><span class="material-icons">favorite</span></a>
+            <a href=""><span class="material-icons">person</span></a>
+          </div>
+        </nav>
+      </div>
+      <div class="container">
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="detalles">
+          <div class="header">
+            <!-- TITULO -->
+            <h1 class="title title--1">Detalles del inmueble</h1>
+            <!-- RANGE PROGRESS SLIDER -->
+            <div class="progress-bar">
+              <div class="progress-bar__advance">
+                <div class="progress-bar__advance--percent half"></div>
+              </div>
+              <div class="progress-bar__steps">
+                <div class="progress-bar__steps--step completed" id="0"></div>
+                <div class="progress-bar__steps--step completed" id="1"></div>
+                <div class="progress-bar__steps--step" id="2"></div>
+              </div>
+            </div>
+            <div class="header__details">
+              <div class="header__details--item">
+                <span class="material-symbols-outlined completed"
+                  >location_on</span
+                >
+                <h4>Ubicacion</h4>
+              </div>
+              <div class="header__details--item">
+                <span class="material-symbols-outlined completed"
+                  >data_info_alert</span
+                >
+                <h4>Detalles</h4>
+              </div>
+              <div class="header__details--item">
+                <span class="material-symbols-outlined">inventory</span>
+                <h4>Resultados</h4>
+              </div>
+            </div>
+            <!-- DESCRIPCION E INSTRUCCIONES DE USO -->
+            <div class="header__instructions">
+              <h4>¿CUÁLES SON LAS CARACTERÍSTICAS DEL INMUEBLE?</h4>
+              <p>
+                Selecciona las características con las que cuenta tu propiedad
+                para poder darte un estimado de precio más preciso.
+              </p>
+            </div>
+          </div>
+          <div class="detalles__inputs">
+            <div class="detalles__inputs--content">
+              <!-- COL 1 -->
+              <div class="detalles__inputs--content col">
+                <div class="detalles__inputs--content item">
+                  <h5>Dirección</h5>
+                  <p>
+                    Río Lerma 300, Colonia Cuauhtémoc, Cuauhtémoc, C.P. 06500,
+                    Ciudad de México, Ciudad de México
+                  </p>
+                </div>
+                <!-- TIPO DE PROPIEDAD -->
+                <div class="detalles__inputs--content item">
+                  <h5>Tipo de propiedad</h5>
+                  <div class="detalles__inputs--content row-buttons" id="tipo">
+                    <div class="button button--outlined" data-value="Casa">
+                      Casa
+                    </div>
+                    <div
+                      class="button button--outlined"
+                      data-value="Departamento"
+                    >
+                      Departamento
+                    </div>
+                  </div>
+                </div>
+                <!-- CASA -->
+                <div class="detalles__inputs--content item">
+                  <h5>Casa</h5>
+                  <div class="detalles__inputs--content row-buttons" id="sola">
+                    <div
+                      class="button button--outlined"
+                      style="width: 50%"
+                      data-value="true"
+                    >
+                      Sola
+                    </div>
+                    <div
+                      class="button button--outlined"
+                      style="width: 50%"
+                      data-value="false"
+                    >
+                      Condominio
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- COL 2 -->
+              <div class="detalles__inputs--content col">
+                <div class="detalles__inputs--content item">
+                  <h5>Recámaras</h5>
+                  <div
+                    class="detalles__inputs--content row-buttons"
+                    id="noRecamaras"
+                  >
+                    <div class="button button--outlined" data-value="1">1</div>
+                    <div class="button button--outlined" data-value="2">2</div>
+                    <div class="button button--outlined" data-value="3">3</div>
+                    <div class="button button--outlined" data-value="4">4+</div>
+                  </div>
+                </div>
+                <div class="detalles__inputs--content item">
+                  <h5>Baños</h5>
+                  <div
+                    class="detalles__inputs--content row-buttons"
+                    id="noBanos"
+                  >
+                    <div class="button button--outlined" data-value="1">1</div>
+                    <div class="button button--outlined" data-value="2">2</div>
+                    <div class="button button--outlined" data-value="3">3</div>
+                    <div class="button button--outlined" data-value="4">4+</div>
+                  </div>
+                </div>
+                <div class="detalles__inputs--content item">
+                  <h5>Medios baños</h5>
+                  <div
+                    id="noMediosBanos"
+                    class="detalles__inputs--content row-buttons"
+                  >
+                    <div class="button button--outlined" data-value="1">1</div>
+                    <div class="button button--outlined" data-value="2">2</div>
+                    <div class="button button--outlined" data-value="3">3</div>
+                    <div class="button button--outlined" data-value="4">4+</div>
+                  </div>
+                </div>
+                <div class="detalles__inputs--content item">
+                  <h5>Estacionamiento</h5>
+                  <div
+                    class="detalles__inputs--content row-buttons"
+                    id="noEstacionamientos"
+                  >
+                    <div class="button button--outlined" data-value="1">1</div>
+                    <div class="button button--outlined" data-value="2">2</div>
+                    <div class="button button--outlined" data-value="3">3</div>
+                    <div class="button button--outlined" data-value="4">4+</div>
+                  </div>
+                </div>
+              </div>
+              <!-- COL 3 -->
+              <div class="detalles__inputs--content col">
+                <div class="detalles__inputs--content item">
+                  <h5>Tamaño de contrucción (m²)</h5>
+                  <input
+                    type="number"
+                    name="tamanoConstruccion"
+                    id="tamanoConstruccion"
+                  />
+                </div>
+                <div class="detalles__inputs--content item">
+                  <h5>Tamaño del terreno (m²)</h5>
+                  <input
+                    type="number"
+                    name="tamanoTerreno"
+                    id="tamanoTerreno"
+                  />
+                </div>
+                <div class="detalles__inputs--content item">
+                  <h5>Años de antigüedad</h5>
+                  <input type="number" name="antiguedad" id="antiguedad" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- AMENIDADES -->
+          <div>
+            <h5 class="bold">Amenidades</h5>
+            <p>Selecciona al menos una de las siguientes amenidades</p>
+          </div>
+          <div id="amenidades" class="detalles__amenidades">
+            <div class="detalles__amenidades--item">
+              <h5>Aire acondicionado</h5>
+              <span class="material-symbols-outlined">location_on</span>
+              <input
+                type="checkbox"
+                name="aireAcondicionado"
+                id="aireAcondicionado"
+              />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Alberca</h5>
+              <span class="material-symbols-outlined">pool</span>
+              <input type="checkbox" name="alberca" id="alberca" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Amueblado</h5>
+              <span class="material-symbols-outlined">dresser</span>
+              <input type="checkbox" name="amueblado" id="amueblado" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Cocina integral</h5>
+              <span class="material-symbols-outlined">countertops</span>
+              <input
+                type="checkbox"
+                name="cocinaIntegral"
+                id="cocinaIntegral"
+              />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Cuarto de lavado/Servicio</h5>
+              <span class="material-symbols-outlined"
+                >local_laundry_service</span
+              >
+              <input type="checkbox" name="cuartoLavado" id="cuartoLavado" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Estudio</h5>
+              <span class="material-symbols-outlined">chair_alt</span>
+              <input type="checkbox" name="estudio" id="estudio" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Gimnasio</h5>
+              <span class="material-symbols-outlined">fitness_center</span>
+              <input type="checkbox" name="gimnasio" id="gimnasio" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Jardin</h5>
+              <span class="material-symbols-outlined">yard</span>
+              <input type="checkbox" name="jardin" id="jardin" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Terraza</h5>
+              <span class="material-symbols-outlined">roofing</span>
+              <input type="checkbox" name="terraza" id="terraza" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Jacuzzi</h5>
+              <span class="material-symbols-outlined">hot_tub</span>
+              <input type="checkbox" name="jacuzzi" id="jacuzzi" />
+            </div>
+            <div class="detalles__amenidades--item">
+              <h5>Seguridad privada</h5>
+              <span class="material-symbols-outlined">zone_person_urgent</span>
+              <input type="checkbox" name="seguridad" id="seguridad" />
+            </div>
+          </div>
+          <div class="detalles__buttons">
+            <!-- BOTON -->
+            <a
+              href="/index.html"
+              class="button button--secondary button--medium"
+              >Atrás</a
+            >
+            <button
+              class="button button--primary button--medium btn-sig-detalle"
+              disabled="true"
+            >
+              Siguiente
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__content">
+          <p>
+            Desarrollado por Fernando Robles -
+            <a href="https://github.com/oakshieldrf">Github</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="build/js/bundle.js"></script>
+  </body>
+</html>

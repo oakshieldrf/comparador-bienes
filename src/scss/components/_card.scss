@@ -1,0 +1,75 @@
+// Estilos para card info
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.card-info {
+  border-radius: 3px;
+  box-shadow: v.$box-shadow;
+  flex: 1;
+  max-width: 95%;
+  color: v.$darkGray;
+
+  @include m.tablet {
+    max-width: 33.3%;
+  }
+
+  &__content {
+    padding: 2rem;
+  }
+
+  &__image {
+    position: relative;
+    & img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 3/2;
+      border-radius: 0.5rem 0.5rem 0 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    & .badge {
+      position: absolute;
+      top: 8%;
+      right: 5%;
+      padding: 1rem 1.5rem;
+      background-color: v.$info;
+      border-radius: 3px;
+      color: v.$darkGray;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__title h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__icon-details {
+    font-size: 1.2rem;
+    @include m.flexLayout(row, flex-end, center, 0.7rem);
+    color: v.$midGray;
+    & div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__direccion {
+    color: v.$darkGray !important;
+    margin-top: 2rem;
+  }
+
+  &__list {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  &__footer {
+    margin-top: 2.5rem;
+  }
+
+  &__amenidades {
+    margin-bottom: 2rem;
+    @include m.flexLayout(row, center, center, 1rem);
+  }
+}

@@ -1,0 +1,31 @@
+// Estilos para forms
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.error-message {
+  color: v.$danger;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.error-input {
+  border: 1px solid v.$danger !important;
+}
+
+#lista-autocompletado {
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: v.$white;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#lista-autocompletado li {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#lista-autocompletado li:hover {
+  background-color: #f2f2f2;
+}

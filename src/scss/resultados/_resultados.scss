@@ -1,0 +1,13 @@
+// Estilos para card info
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.resultados {
+  margin: 6rem 0;
+  @include m.flexLayout(row, space-between, center, 3rem);
+  flex-wrap: wrap;
+
+  &__botones {
+    @include m.flexLayout(row, flex-end, center, 2rem);
+  }
+}

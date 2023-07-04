@@ -1,0 +1,16 @@
+// Estilos para textos
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.title {
+  text-align: center;
+  font-family: v.$main_font;
+  &--1 {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
